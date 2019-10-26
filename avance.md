@@ -1,12 +1,12 @@
 # Ecommerce
 
-## Apuntes Commits
+## Ramas en git
 
-### 01 First Commit
+### 01BasicStructure
 
-Estructura básica:
+Estructura básica de un proyecto en NodeJS, Express, Template engine (Pug) y MongoDB.
 
-#### Comandos
+#### Comandos:
 
 ```shell
 mkdir ecommerce
