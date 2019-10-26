@@ -45,3 +45,22 @@ Usando Pug como Template Engine
 - index.`js`
 
 ---
+
+### 03ImplementBulmaInPug
+
+Implementando el framework Bulma en el Template Engine "Pug".
+
+Bulma solo tiene CSS, lo que lo hace muy liviano a comparación de Bootstrap.
+
+#### Archivos añadidos:
+
+- ./views/footer.`pug`
+- ./views/navbar.`pug`
+- ./views/layout.`pug`
+
+#### Archivos acualizados:
+
+- ./views/products.`pug`
+- ./routes/products.`js`
+
+---
