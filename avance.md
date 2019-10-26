@@ -28,3 +28,20 @@ npm i -D nodemon
 
 - index.`js`
 - package.`json`
+
+---
+
+### 02PugTemplateEngine
+
+Usando Pug como Template Engine
+
+#### Archivos añadidos:
+
+- ./routes/products.`js`
+- ./views/products.`pug`
+
+#### Archivos acualizados:
+
+- index.`js`
+
+---
