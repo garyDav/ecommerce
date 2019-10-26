@@ -61,6 +61,5 @@ Bulma solo tiene CSS, lo que lo hace muy liviano a comparación de Bootstrap.
 #### Archivos acualizados:
 
 - ./views/products.`pug`
-- ./routes/products.`js`
 
 ---
