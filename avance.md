@@ -79,5 +79,9 @@ Implementando archivos estáticos
 #### Archivos acualizados:
 
 - index.`js`
+- ./views/layout.`pug`
+- ./views/products.`pug`
+- ./views/footer.`pug`
+- ./views/navbar.`pug`
 
 ---
