@@ -85,3 +85,25 @@ Implementando archivos estáticos
 - ./views/navbar.`pug`
 
 ---
+
+### 05API_REST-FULL
+
+Implementando la anatomía para una API REST-FULL.
+
+REST, estilo de arquitectura para Web services, no es un estandar pero si existe una especificación por Roy Fielding cofundador de Apache, HTTP Server y el director de Apache Software Fundation, y actualmente trabaja para Abode. Consiste en el envío y recivimiento de archivos `json` y `XML`, utiliza HTTP Verbs explícitamente (GET, POST, DELETE, etc...), también tiene un patrón de URI y está basado en directorios para las rutas.
+
+![HTTP Verbs](https://github.com/garyDav/ecommerce/blob/master/img/verbs.png)
+
+![API Verbs](https://github.com/garyDav/ecommerce/blob/master/img/api-verbs.png)
+
+#### Archivos añadidos:
+
+- ./routes/api/products.`js`
+- ./utils/mocks/products.`js`
+
+#### Archivos acualizados:
+
+- index.`js`
+- ./routes/products.`js`
+
+---
