@@ -63,3 +63,21 @@ Bulma solo tiene CSS, lo que lo hace muy liviano a comparación de Bootstrap.
 - ./views/products.`pug`
 
 ---
+
+### 04StaticFiles
+
+Implementando archivos estáticos
+
+#### Archivos añadidos:
+
+- ./public/assets/main.`css`
+- ./public/images/hero-bg.`jpg`
+- ./public/logo/octolion-white@2x.`png`
+- ./public/logo/octolion@2x.`png`
+- ./public/favicon.`png`
+
+#### Archivos acualizados:
+
+- index.`js`
+
+---

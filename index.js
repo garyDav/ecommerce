@@ -3,6 +3,8 @@ const path = require('path')
 const app = express()
 const productsRouter = require('./routes/products')
 
+app.use('/static', express.static(path.join(__dirname, 'public')))
+
 app.get('/', (req, res, next) => {
   res.send({hello: 'world'})
 })
