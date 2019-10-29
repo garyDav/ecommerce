@@ -128,6 +128,12 @@ Explicando el flujo: Sea que reciva una llamada por una ___View___ o un ___API__
 npm i -S body-parser
 ```
 
+Para desinstalar una librería de nuestro package.`json`
+
+```shell
+npm uninstall -S body-parse
+```
+
 #### Archivos añadidos:
 
 - ./services/products.`js`
@@ -139,3 +145,13 @@ npm i -S body-parser
 - index.`js`
 
 ---
+
+### 07RecappingTheProject
+
+Recapitulando el proyecto, cambiamos la estructura del proyecto y añadimos comentarios.
+
+#### Archivos acualizados:
+
+- index.`js`
+- ./routes/views/products.`js`
+- ./routes/api/products.`js`
