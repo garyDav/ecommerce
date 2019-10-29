@@ -107,3 +107,35 @@ REST, estilo de arquitectura para Web services, no es un estandar pero si existe
 - ./routes/products.`js`
 
 ---
+
+### 06ServiceLayer
+
+Implementando capa de servicio.
+
+Veremos una aquitectura que está basado en MVC.
+
+La arquitectura MVC se quedó corto, autores como Taylor Otwell creador de Laravel, habla de que no es suficiente, MVC debería ser llamado: Separación de Problemas.
+
+Nuestro "Modelo" es parte del paquete "Librerías", este paquete es básicamente el que se encarga de conectarse con librerías externas, es decir: Base de datos, Base de datos de otros servicios, y otras APIs. La "Vista" realmente está representada por los datos que enviamos o recivimos que nos envía el "Controlador", la función de este "Controlador" es simplemente recivir y enviar datos a la "Vista". En éste caso nuestro "Controlador" está representado por los Middlewares y Router que implementamos, este "Controlador" también se encargan de las API que en este caso reciven y envían JSON. Y los **Servicios** es el corazón de nuestra aplicación, los servicios se encargan, no solo de llamar a las "Librerías", si no llamar a otros **Servicios**, básicamente la **Lógica de Negocios** centra en esta parte.
+
+Explicando el flujo: Sea que reciva una llamada por una ___View___ o un ___API___ el ___Controllers___ recive ésta información y su única tarea es pasarle ésta información a los ___Services___, éstos Servicios deciden que hacer con esto, ya sea llamar a ótros Servicios, si van aplicar una Logica de Negocios, si van aplicar Reglas de Seguridad, etc., y cuándo yá tengan claro eso, ésos Servicios llaman a las ___Libraries (Lib)___, la lógica que deberían tener las Librerías es exclusívamente para el consumo de Datos, puede que llame a las Librerías de MongoDB, en Firebase, ó para llamar a otra API que séa posible. Ésto es básicamente la arquitectura.
+
+![Capas MVC](https://github.com/garyDav/ecommerce/blob/master/img/MVC.png)
+
+#### Comandos:
+
+```shell
+npm i -S body-parser
+```
+
+#### Archivos añadidos:
+
+- ./services/products.`js`
+
+#### Archivos acualizados:
+
+- ./routes/api/products.`js`
+- ./routes/products.`js`
+- index.`js`
+
+---
