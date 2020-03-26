@@ -92,9 +92,9 @@ Implementando la anatomía para una API REST-FULL.
 
 REST, estilo de arquitectura para Web services, no es un estandar pero si existe una especificación por Roy Fielding cofundador de Apache, HTTP Server y el director de Apache Software Fundation, y actualmente trabaja para Abode. Consiste en el envío y recivimiento de archivos `json` y `XML`, utiliza HTTP Verbs explícitamente (GET, POST, DELETE, etc...), también tiene un patrón de URI y está basado en directorios para las rutas.
 
-![HTTP Verbs](https://github.com/garyDav/ecommerce/blob/master/img/verbs.png)
+![HTTP Verbs](./img/verbs.png)
 
-![API Verbs](https://github.com/garyDav/ecommerce/blob/master/img/api-verbs.png)
+![API Verbs](./img/api-verbs.png)
 
 #### Archivos añadidos:
 
@@ -120,7 +120,7 @@ Nuestro "Modelo" es parte del paquete "Librerías", este paquete es básicamente
 
 Explicando el flujo: Sea que reciva una llamada por una ___View___ o un ___API___ el ___Controllers___ recive ésta información y su única tarea es pasarle ésta información a los ___Services___, éstos Servicios deciden que hacer con esto, ya sea llamar a ótros Servicios, si van aplicar una Logica de Negocios, si van aplicar Reglas de Seguridad, etc., y cuándo yá tengan claro eso, ésos Servicios llaman a las ___Libraries (Lib)___, la lógica que deberían tener las Librerías es exclusívamente para el consumo de Datos, puede que llame a las Librerías de MongoDB, en Firebase, ó para llamar a otra API que séa posible. Ésto es básicamente la arquitectura.
 
-![Capas MVC](https://github.com/garyDav/ecommerce/blob/master/img/MVC.png)
+![Capas MVC](./img/MVC.png)
 
 #### Comandos:
 
