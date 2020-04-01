@@ -2,6 +2,15 @@
 
 ## Ramas en git
 
+Estando en la rama master
+
+```shell
+git add .
+git commit -m "new rama"
+git checkout -b newRama
+git checkout master
+```
+
 ### 01BasicStructure
 
 Estructura básica de un proyecto en NodeJS, Express, Template engine (Pug) y MongoDB.
@@ -155,3 +164,103 @@ Recapitulando el proyecto, cambiamos la estructura del proyecto y añadimos come
 - index.`js`
 - ./routes/views/products.`js`
 - ./routes/api/products.`js`
+
+### 08ConnectionToMongoDB
+
+Cómo conectarse a una instancia de MongoDB usando `mLab`, es un servicio de base de datos que nos ofrece conexiones a MongoDB, para ello lo que tenemos que hacer es:
+
+* Crear una Cuenta.
+* Crear una Base de Datos.
+* Crear un usuario.
+
+Es importante que las credenciales de la cuenta de `mLab` las creemos usando aplicativos como LastPass o 1Password.
+
+Es importante que nuestro archivo `.env` no exista en nuestro repositorio de `github`, porque ahí tendremos toda la información necesaria, para conectarnos a nuestra `BD`.
+
+Actualmente `mlab` es parte de `MongoDB`, así que con nuestras credenciales ya creadas accedemos a `mongodb.com`, una vez dentro creamos un Cluster gratuino, cambiamos el nombre `Cluster0` por cualquiera, en mi caso será `ggary`.
+
+#### Configurando nuestro Cluster
+
+1. `Crear usuario`, en la parte del menú, accedemos a `Security->Database Access`, agregamos un nuevo usuario de la `BD`, en mi caso el usuario es `mgary`, estas credenciales lo usaremos en el archivo `.env`.
+
+2. `IP Address`, en la parte del menú, accedemos a `Security->Network Access`, añadimos un `IP Address`, pulsamos `ADD CURRENT IP ADDRESS`, nos genera una IP `0.0.0.0/0`, por medio de esta lista de IP Addresses accedemos a nuestro Cluster.
+
+3. `BD`, en la parte del menú, accedemos a `Atlas->Clusters`, nos aparecerá una lista de nuestros Clusters, en la que creamos precionamos `COLLECTIONS`, y creamos nuestra base de datos, para este proyecto será `octolion`, con la colección `products`.
+
+#### Conectarse a nuestra `BD` del Cluster
+
+* Conectarse por `mongo shell`, en mi caso la versión `4.2.5`.
+
+![shell-1](./img/shell/shell-1.png)
+
+![shell-2](./img/shell/shell-2.png)
+
+![shell-3](./img/shell/shell-3.png)
+
+Mi cadena de coneccción: `mongo "mongodb+srv://ggary-dy8z2.mongodb.net/test"  --username mgary`
+
+![shell-4](./img/shell/shell-4.png)
+
+Ingresamos la contraseña de nuestro usuario de la `BD`.
+
+![shell-5](./img/shell/shell-5.png)
+
+Mostramos las `BD`.
+
+![shell-6](./img/shell/shell-6.png)
+
+* Conectarse por Studio 3T:
+
+![studio-0](./img/studio3T/studio-0.png)
+
+![studio-1](./img/studio3T/studio-1.png)
+
+![studio-2](./img/studio3T/studio-2.png)
+
+Al copiar la cadena de conección: `mongodb+srv://mgary:<password>@ggary-dy8z2.mongodb.net/test`
+
+Añadimos la contraseña del usuario `ggary` y pegamos en Studio 3T: `New Connection->From URI...`
+
+![studio-3](./img/studio3T/studio-3.png)
+
+![studio-4](./img/studio3T/studio-4.png)
+
+![studio-5](./img/studio3T/studio-5.png)
+
+No olvidemos cambiar por la contraseña correcta.
+
+![studio-6](./img/studio3T/studio-6.png)
+
+![studio-7](./img/studio3T/studio-7.png)
+
+Todos estos datos anteriores debería hallar por defecto, una vez terminado, precionamos en `Test Connection` para asegurarnos que la conección tiene éxito.
+
+![studio-8](./img/studio3T/studio-8.png)
+
+![studio-9](./img/studio3T/studio-9.png)
+
+Como la conección fue exitosa nos muestra las `BD` de nuestro Cloud.
+
+![studio-10](./img/studio3T/studio-10.png)
+
+* Conectarse por Robo 3T:
+
+![robo-1](./img/robo3T/robo-1.png)
+
+![robo-2](./img/robo3T/robo-2.png)
+
+Editamos `Name`, en nuestro caso pondré `Octolion`
+
+![robo-3](./img/robo3T/robo-3.png)
+
+![robo-4](./img/robo3T/robo-4.png)
+
+![robo-5](./img/robo3T/robo-5.png)
+
+* Conectarse por MongoDB Compass:
+
+![compass-1](./img/compass/compass-1.png)
+
+No olvidemos cambiar la contraseña.
+
+![compass-2](./img/compass/compass-2.png)
