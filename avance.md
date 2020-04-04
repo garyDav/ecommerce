@@ -9,6 +9,8 @@ git add .
 git commit -m "new rama"
 git checkout -b newRama
 git checkout master
+git push origin newRama
+git push origin master
 ```
 
 ### 01BasicStructure
@@ -30,7 +32,7 @@ npm i -D nodemon
 
 - package.`json`
 - index.`js`
-- `.gitignore`
+- .`gitignore`
 - avance.`md`
 
 #### Archivos acualizados:
@@ -165,7 +167,9 @@ Recapitulando el proyecto, cambiamos la estructura del proyecto y añadimos come
 - ./routes/views/products.`js`
 - ./routes/api/products.`js`
 
-### 08ConnectionToMongoDB
+---
+
+### 08MongoDBconnectionExpress
 
 Cómo conectarse a una instancia de MongoDB usando `mLab`, es un servicio de base de datos que nos ofrece conexiones a MongoDB, para ello lo que tenemos que hacer es:
 
@@ -264,3 +268,29 @@ Editamos `Name`, en nuestro caso pondré `Octolion`
 No olvidemos cambiar la contraseña.
 
 ![compass-2](./img/compass/compass-2.png)
+
+---
+
+### 09ServicesWithMongoDB
+
+Creamos un archivo de configuración `.env.example` para que el desarrollador cree su propio archivo `.env` lo cual no debe ser añadido al repositorio.
+
+#### Comandos:
+
+```shell
+npm i -S dotenv
+npm i -S mongodb
+```
+
+#### Archivos añadidos:
+
+- ./.`env.example`
+- ./.`env`
+- ./config/index.`js`
+- ./lig/mongo.`js`
+
+#### Archivos acualizados:
+
+- ./avance.`md`
+- ./.`gitignore`
+- ./services/products.`js`
