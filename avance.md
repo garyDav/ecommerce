@@ -2,14 +2,14 @@
 
 ## Ramas en git
 
-Estando en la rama master
+Estando en la rama master.
 
 ```shell
 git add .
 git commit -m "new rama"
 git checkout -b newRama
-git checkout master
 git push origin newRama
+git checkout master
 git push origin master
 ```
 
@@ -44,7 +44,7 @@ npm i -D nodemon
 
 ### 02PugTemplateEngine
 
-Usando Pug como Template Engine
+Usando Pug como Template Engine.
 
 #### Archivos añadidos:
 
@@ -77,7 +77,7 @@ Bulma solo tiene CSS, lo que lo hace muy liviano a comparación de Bootstrap.
 
 ### 04StaticFiles
 
-Implementando archivos estáticos
+Implementando archivos estáticos.
 
 #### Archivos añadidos:
 
@@ -139,7 +139,7 @@ Explicando el flujo: Sea que reciva una llamada por una ___View___ o un ___API__
 npm i -S body-parser
 ```
 
-Para desinstalar una librería de nuestro package.`json`
+Para desinstalar una librería de nuestro package.`json`.
 
 ```shell
 npm uninstall -S body-parse
@@ -201,7 +201,7 @@ Actualmente `mlab` es parte de `MongoDB`, así que con nuestras credenciales ya 
 
 ![shell-3](./img/shell/shell-3.png)
 
-Mi cadena de coneccción: `mongo "mongodb+srv://ggary-dy8z2.mongodb.net/test"  --username mgary`
+Mi cadena de coneccción: `mongo "mongodb+srv://ggary-dy8z2.mongodb.net/test"  --username mgary`.
 
 ![shell-4](./img/shell/shell-4.png)
 
@@ -221,9 +221,9 @@ Mostramos las `BD`.
 
 ![studio-2](./img/studio3T/studio-2.png)
 
-Al copiar la cadena de conección: `mongodb+srv://mgary:<password>@ggary-dy8z2.mongodb.net/test`
+Al copiar la cadena de conección: `mongodb+srv://mgary:<password>@ggary-dy8z2.mongodb.net/test`.
 
-Añadimos la contraseña del usuario `ggary` y pegamos en Studio 3T: `New Connection->From URI...`
+Añadimos la contraseña del usuario `ggary` y pegamos en Studio 3T: `New Connection->From URI...`.
 
 ![studio-3](./img/studio3T/studio-3.png)
 
@@ -253,7 +253,7 @@ Como la conección fue exitosa nos muestra las `BD` de nuestro Cloud.
 
 ![robo-2](./img/robo3T/robo-2.png)
 
-Editamos `Name`, en nuestro caso pondré `Octolion`
+Editamos `Name`, en nuestro caso pondré `Octolion`.
 
 ![robo-3](./img/robo3T/robo-3.png)
 
@@ -297,10 +297,50 @@ npm i -S mongodb
 
 ### 10ImplementingCRUD
 
-Implementamos acciones CRUD de mongo DB y lo utilizamos en nuetro servicio, para realizar la prueba utilizamos `postman`
+Implementamos acciones CRUD de mongo DB y lo utilizamos en nuetro servicio, para realizar la prueba utilizamos `postman`.
+
+![CRUD-MongoDB](./img/CRUD-MongoDB.png)
 
 #### Archivos acualizados:
 
 - ./avance.`md`
 - ./lib/mongo.`js`
 - ./services/products.`js`
+
+### 11Middleware
+
+Es nada más una función, que tiene tiene tres argumentos:
+
+* El `request` object
+* El `response` object
+* Y un Callback llamado `next`, que cuando se invoca llama al siguiente middleware.
+
+Piensen en un middleware como una serie de capas en un `request`.
+
+#### ¿Para que sirve?
+
+Para hacer modificaciones al `request` y al `response` object, podemos hacer cosas como validaciones, manejo de errores, etc...
+
+Pero lo más importante del middleware es, siempre llamar a la función `next()`
+
+![Middleware](./img/middleware.png)
+
+#### Tipos de Middleware
+
+![Middleware](./img/middleware-types.png)
+
+>Ejemplos de cada uno, respectivamente.
+
+* Body-parser: cuando lo agregamos a nuestra aplicación, lo que hace es: interceptar el `request` verificar que tenga un cuerpo (`Body`) y si necesita ser formateado a `json`, y aplicar lo necesario para que funcione.
+
+* Router aplicadas a nuestras API o a nuestras Vistas "`routes/api`" "`routes/views`".
+
+* Express-static, por que se usa con `app.use()`.
+
+* Integrados con Express.
+
+* Lo veremos en el siguiente apartado.
+
+#### Archivos acualizados:
+
+- ./avance.`md`
