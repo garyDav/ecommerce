@@ -273,7 +273,7 @@ No olvidemos cambiar la contraseña.
 
 ### 09ServicesWithMongoDB
 
-Creamos un archivo de configuración `.env.example` para que el desarrollador cree su propio archivo `.env` lo cual no debe ser añadido al repositorio.
+Creamos un archivo de configuración `.env.example` para que el desarrollador cree su propio archivo `.env` lo cual no debe ser añadido al repositorio, luego realizamos la conección a nuestro mongoDB de nuestro Cloud, por último comprobamos listando la colección de `products`.
 
 #### Comandos:
 
@@ -293,4 +293,14 @@ npm i -S mongodb
 
 - ./avance.`md`
 - ./.`gitignore`
+- ./services/products.`js`
+
+### 10ImplementingCRUD
+
+Implementamos acciones CRUD de mongo DB y lo utilizamos en nuetro servicio, para realizar la prueba utilizamos `postman`
+
+#### Archivos acualizados:
+
+- ./avance.`md`
+- ./lib/mongo.`js`
 - ./services/products.`js`
