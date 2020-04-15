@@ -344,3 +344,21 @@ Pero lo más importante del middleware es, siempre llamar a la función `next()`
 #### Archivos acualizados:
 
 - ./avance.`md`
+
+### 12ErrorsWithMiddlewares
+
+Las mejores formas de manejar errores en express es usando un middleware.
+
+![ErrorMiddleware](./img/error-middleware.png)
+
+#### Archivos añadidos:
+
+- ./utils/middlewares/errorsHandlers.`js`
+- ./views/error.`pug`
+
+#### Archivos acualizados:
+
+- ./avance.`md`
+- ./routes/api/products.`js`
+- ./routes/views/products.`js`
+- ./index.`js`
