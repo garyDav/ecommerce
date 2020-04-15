@@ -11,6 +11,9 @@ git checkout -b newRama
 git push origin newRama
 git checkout master
 git push origin master
+
+git checkout newRama
+git merge master
 ```
 
 ### 01BasicStructure

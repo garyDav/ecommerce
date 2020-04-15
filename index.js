@@ -40,7 +40,7 @@ app.use((req, res, next) => {
   if(isRequestAjaxOrAPI(req)) {
     const {
       output: { statusCode, payload }
-    } = boom.notFoud()
+    } = boom.notFound()
 
     res.status(statusCode).json(payload)
   }
