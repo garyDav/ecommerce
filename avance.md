@@ -375,6 +375,38 @@ El `schema` es simplemente las reglas, de como deben ser nuestros datos, como el
 
 En `check` diremos que parte del `request` vamos a validar, por defecto es `body`.
 
+Luego veremos como utilizar `joi` para nuestro middleware de validación, y como utilizar `boom` para nuestros middlewares de errores.
+
 #### Archivos acualizados:
 
 - ./avance.`md`
+
+### 14JoiAndBoom
+
+Son librerías que vienen del ecosistema de **HapiJS**.
+
+Joi, es básicamente un validador de esquemas de objetos.
+
+Boom, nos permite enviar errores de una manera más agradable.
+
+Una vez implementado `joi` realizamos pruebas:
+
+![Validation-POST-Postman](./img/validation/create-schema.png)
+
+![Validation-PUT-ID-Postman](./img/validation/id-schema.png)
+
+#### Comandos:
+
+```shell
+npm i -S joi
+```
+
+#### Archivos añadidos:
+
+- ./utils/schemas/products.`js`
+
+#### Archivos acualizados:
+
+- ./avance.`md`
+- ./utils/middlewares/validationHandler.`js`
+- ./routes/api/products.`js`
