@@ -362,3 +362,19 @@ Las mejores formas de manejar errores en express es usando un middleware.
 - ./routes/api/products.`js`
 - ./routes/views/products.`js`
 - ./index.`js`
+
+### 13ValidationWithMiddlewares
+
+Evitamos que nos envíen a nuestros **EndPoints** datos que no corresponden al **esquema** que tenemos.
+
+Implementaremos una función de tipo **Clusure**.
+
+![FunctionClosure](./img/function-closure.png)
+
+El `schema` es simplemente las reglas, de como deben ser nuestros datos, como el tipo de dato en un campo o si es requerido, o no, etc.
+
+En `check` diremos que parte del `request` vamos a validar, por defecto es `body`.
+
+#### Archivos acualizados:
+
+- ./avance.`md`
