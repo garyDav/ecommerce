@@ -295,6 +295,8 @@ npm i -S mongodb
 - ./.`gitignore`
 - ./services/products.`js`
 
+---
+
 ### 10ImplementingCRUD
 
 Implementamos acciones CRUD de mongo DB y lo utilizamos en nuetro servicio, para realizar la prueba utilizamos `postman`.
@@ -306,6 +308,8 @@ Implementamos acciones CRUD de mongo DB y lo utilizamos en nuetro servicio, para
 - ./avance.`md`
 - ./lib/mongo.`js`
 - ./services/products.`js`
+
+---
 
 ### 11Middleware
 
@@ -345,6 +349,8 @@ Pero lo más importante del middleware es, siempre llamar a la función `next()`
 
 - ./avance.`md`
 
+---
+
 ### 12ErrorsWithMiddlewares
 
 Las mejores formas de manejar errores en express es usando un middleware.
@@ -362,6 +368,8 @@ Las mejores formas de manejar errores en express es usando un middleware.
 - ./routes/api/products.`js`
 - ./routes/views/products.`js`
 - ./index.`js`
+
+---
 
 ### 13ValidationWithMiddlewares
 
@@ -381,6 +389,8 @@ Luego veremos como utilizar `joi` para nuestro middleware de validación, y como
 
 - ./avance.`md`
 
+---
+
 ### 14JoiAndBoom
 
 Son librerías que vienen del ecosistema de **HapiJS**.
@@ -399,14 +409,21 @@ Una vez implementado `joi` realizamos pruebas:
 
 ```shell
 npm i -S joi
+npm i -S boom
 ```
 
 #### Archivos añadidos:
 
-- ./utils/schemas/products.`js`
+- `joi` ./utils/schemas/products.`js`
+- `boom` ./utils/isRequestAjaxOrAPI.`js`
+- `boom` ./views/404.pug
 
 #### Archivos acualizados:
 
 - ./avance.`md`
-- ./utils/middlewares/validationHandler.`js`
-- ./routes/api/products.`js`
+- `joi` ./utils/middlewares/validationHandler.`js`
+- `joi` ./routes/api/products.`js`
+- `boom` ./utils/middlewares/errorsHandlers.`js`
+- `boom` ./utils/middlewares/validationHandler.`js`
+- `boom` ./index.`js`
+- `boom` ./views/error.`pug`
