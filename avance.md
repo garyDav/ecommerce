@@ -430,3 +430,69 @@ npm i -S boom
 - `boom` ./utils/middlewares/validationHandler.`js`
 - `boom` ./index.`js`
 - `boom` ./views/error.`pug`
+
+---
+
+### 15Authentication
+
+Implementamos nuestro `access_token`
+
+Para ejecutarlo en Postman accedemos al apartado -> Auth -> TYPE "Basic Auth" -> username: admin -> Password: \*\*\*\*\*\*
+
+![POST token](./img/passport/post-token.png)
+
+Podemos comprobar nuestro `access_token` vamos a la página https://jwt.io/
+
+![JWT.IO](./img/passport/jwt-io.png)
+
+#### JSON Web Tokens
+
+Es un estándar que nos permite representar __claims__ (reclamaciones), que podría ser traducido como peticiones o permisos entre dos partes, un JSON Web token tiene las siguientes partes:
+
+![JWT](./img/passport/jwt.png)
+
+El __Header__ lo que incluye, cuál fue el algoritmo con el que se firmó y si el tipo de token es JSON Web token.
+
+El __Payload__ normalmente tiene información que queremos compartir entre esas partes, éstos son los claims, __sub__ generalmente hace parte a la identificación del usuario, debemos tener mucho cuidado de no incluir información sencible, porque esto puede ser facilmente decodificado, __iat__ es cuándo se genero el token "el tiempo".
+
+El __Signature__ (firma), generalmente se hace codificando el Header concatenando con un punto, más el payload y firmándolo con nuestro string secreto.
+
+Si por alguna razón cambian el __payload__ o cambian el __header__, para simular un token con permisos extras, como la firma siempre estará contruida basada en el __header__ y el __payload__, dará invalido.
+
+#### Asegurando nuestra API con JWTs
+
+Para esto debemos crear una nueva estrategia `utils->auth->strategies->jwt.js`, por medio de este archivo comprobaremos si el JWT está bien firmado, y obtendremos la información del usuario de él.
+
+Luego nos toca incluir ésta estrategia en nuestro end-point, para así asegurar nuestras rutas de actualizar producto y eliminar.
+
+![Unauthorized](./img/passport/unauthorized.png)
+
+![Access Token](./img/passport/access_token.png)
+
+![Authorizarion](./img/passport/authorizarion.png)
+
+#### Comandos:
+
+```shell
+npm i -S passport passport-http passport-jwt jsonwebtoken bcrypt
+npm i -D chalk
+```
+
+#### Archivos añadidos:
+
+- ./scripts/mongo/seed-admin.`js`
+- ./utils/auth/strategies/basic.`js`
+- ./routes/api/auth.`js`
+
+- ./utils/auth/strategies/jwt.`js`
+
+#### Archivos acualizados:
+
+- ./.`env.example`
+- ./.`env`
+- ./config/index.`js`
+- ./index.`js`
+
+- ./routes/api/products.`js`
+
+---
