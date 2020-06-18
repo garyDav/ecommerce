@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const boom = require('boom')
+const debug = require('debug')('app:server')
 const productsRouter = require('./routes/views/products')
 const productsApiRouter = require('./routes/api/products')
 const authApiRouter = require('./routes/api/auth')
@@ -57,5 +58,5 @@ app.use(errorHandler)
 
 // Server
 const server = app.listen(8000, _ => {
-  console.log(`Listening http://localhost:${server.address().port}`)
+  debug(`Listening http://localhost:${server.address().port}`)
 })

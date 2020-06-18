@@ -522,3 +522,26 @@ npm i -D supertest mocha sinon proxyquire
 - ./utils/mocks/products.`js`
 
 ---
+
+### 17Debuggin-Inspect
+
+__Debug__ nos muestra en consola el mensaje de nuestro work space, con colores e incluso el tiempo que demora.
+
+__Inspect__ en nuestro navegador abrimos el google developer tools y nos aparece el ícono de node, precionamos, nos habre una nueva ventana, precionamos Sources y podemos crear puntos de interrupción y poder depurar nuestro código.
+
+#### Comandos:
+
+```shell
+npm i -S debug
+```
+
+#### Archivos añadidos:
+
+#### Archivos acualizados:
+
+- ./package.`json`
+- ./index.`js`
+- ./lib/mongo.`js`
+- ./utils/middlewares/errorsHandlers.`js`
+
+---
