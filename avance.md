@@ -496,3 +496,29 @@ npm i -D chalk
 - ./routes/api/products.`js`
 
 ---
+
+### 16Test
+
+#### Comandos:
+
+```shell
+npm i -D supertest mocha sinon proxyquire
+```
+
+#### Archivos añadidos:
+
+- ./test
+- ./utils/testServer.`js`
+- ./test/routes.api.products.`test.js`
+- ./utils/mocks/mongoLib.`js`
+- ./test/services.products.test.`js`
+- ./test/utils.isRequestAjaxOrApi.test.js
+
+#### Archivos acualizados:
+
+- ./package.`json`
+- ./routes/api/products.`js`
+- ./index.`js`
+- ./utils/mocks/products.`js`
+
+---
