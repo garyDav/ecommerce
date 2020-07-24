@@ -30,7 +30,7 @@ describe.only("Combinatoria", function() {
     assert.strictEqual(combinatoria(5,5), 1)
   })
   it("Combinatoria con x y n valores de cadena", function() {
-    assert.strictEqual(combinatoria(-5,3), 'error: x no debe ser negativo')
+    assert.strictEqual(combinatoria('3','7'), 35)
   })
   it("Combinatoria con x=1 y n=1", function() {
     assert.strictEqual(combinatoria(1,1), 1)
