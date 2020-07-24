@@ -545,3 +545,33 @@ npm i -S debug
 - ./utils/middlewares/errorsHandlers.`js`
 
 ---
+
+### 18GoodPractices
+
+#### Middlewares populares
+
+* body-parser
+* cors
+* morgan
+* helmet
+* express-debug
+* express-slash
+* passport
+
+##### body-parser:
+
+No solo nos permite transformar `body` a tipo `json`, tambén recibe `row`, puede ser un buffer, un binario, también recibe texto y url encode.
+
+##### cors:
+
+Nos sirve para verificar los `request`, que hace un cliente desde un navegador, sea del mismo dominio ó que permitamos a todos. Esto es por temas de seguridad, para evitar que nos hagan `request` desde clientes que no pertenecen al mismo dominio, es una muy buena practica activar el `cors` en el mismo dominio, ó dominios que sabemos que van a consumir nuestros `end-points` para producción.
+
+##### morgan:
+
+Es un loguer de `request`, si por ejemplo, queremos hacer un `console.log(req)` de nuestro objeto `request` para explorar que tiene, ya nó sería necesario hacerlo, instalando morgan podemos hacer esto automaticamente.
+
+##### helmet:
+
+
+
+---
