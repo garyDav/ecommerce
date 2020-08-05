@@ -499,6 +499,8 @@ npm i -D chalk
 
 ### 16Test
 
+Cuando hacemos el llamado de las rutas, y las agregamos a nuestra aplicación, estamos diciendo practicamente a nuestra aplicación que rutas usar, en la inversión de control que aplicaremos, consiste en que la ruta decide qué aplicación usar.
+
 #### Comandos:
 
 ```shell
