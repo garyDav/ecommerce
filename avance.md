@@ -501,6 +501,16 @@ npm i -D chalk
 
 Cuando hacemos el llamado de las rutas, y las agregamos a nuestra aplicación, estamos diciendo practicamente a nuestra aplicación que rutas usar, en la inversión de control que aplicaremos, consiste en que la ruta decide qué aplicación usar.
 
+El siguiente paso es crear una utilidad para levantar un servidor de pruebas, donde implementamos la inversión de control.
+
+Luego empezamos a crear nuestras sentencias de test, creamos una ruta que estará intervenida con `proxyquire`, para la ruta de servicio lo remplazamos por Mock, lo que queremos probar es que los controladores (reciben y envían datos) den correctamente.
+
+El paso siguiente es probar los servicios, y de igual manera como hicimos para probar los end-points tuvimos que hacer Mock para nuestros servicios, los servicios que llaman a nuestras librerías, éstas tienen que ser Mockeadas.
+
+Para hacer estos Mock y los llamados, usaremos la librería `sinon`, nos permite hacer Mocks, stub's y una serie de cosas que pueden encontrar en la página de `sinon`.
+
+Con nuestro `getAllStub.withArgs()` cuando se le pase ciertos argumentos retorne ciertas cosas.
+
 #### Comandos:
 
 ```shell

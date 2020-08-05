@@ -50,7 +50,7 @@ app.use((req, res, next) => {
   res.status(404).render('404')
 })
 
-// Error handlers 
+// Error handlers
 app.use(logErrors)
 app.use(wrapErrors)
 app.use(clientErrorHandler)
