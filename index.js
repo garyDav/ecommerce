@@ -6,7 +6,7 @@ const debug = require('debug')('app:server')
 const productsRouter = require('./routes/views/products')
 const productsApiRouter = require('./routes/api/products')
 const authApiRouter = require('./routes/api/auth')
-const { config } = require('../config')
+const { config } = require('./config')
 
 const {
   logErrors,
