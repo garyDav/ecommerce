@@ -4,6 +4,10 @@
 
 Estando en la rama master.
 
+## Notas
+
+[Enlace a Notas](./notas.md)
+
 ```shell
 git add .
 git commit -m "new rama"
